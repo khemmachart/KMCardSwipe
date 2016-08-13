@@ -58,48 +58,6 @@ class ViewController: UIViewController {
 
 extension ViewController: UIScrollViewDelegate {
     
-    func overCheckPoint(xPosition: CGFloat) -> Bool {
-        let currentCardPosition = abs(xPosition - CGFloat(currentIndex) * self.scrollView.frame.width)
-        let checkPoint = self.scrollView.frame.width * 0.5
-        
-        return currentCardPosition > checkPoint
-    }
-    
-    func reachEdge(index: Int) -> Bool {
-        let indexOutOfBounds = index < 0 || index == self.card.count
-        let currentIndexOutOfBound = currentIndex < 0 || currentIndex == self.card.count
-        
-        return indexOutOfBounds || currentIndexOutOfBound
-    }
-    
-    func scrollViewWillBeginDecelerating(scrollView: UIScrollView) {
-//        let xPosition = scrollView.contentOffset.x
-//        let isForward = xPosition/scrollView.frame.width > CGFloat(self.currentIndex)
-//        let index = isForward ? currentIndex + 1 : currentIndex - 1
-//        
-//        if (!overCheckPoint(xPosition) || reachEdge(index)) {
-//            return
-//        }
-//        
-//        self.previous(view: self.card[currentIndex].subviews[0])
-//        self.next(view: self.card[index].subviews[0])
-        
-        
-        
-//        let xPosition = scrollView.contentOffset.x + scrollView.frame.width/2
-//        let pageIndex = Int(xPosition/scrollView.frame.width)
-//        self.currentIndex = pageIndex
-//        print(pageIndex)
-//        
-//        for (index, view) in self.card.enumerate() {
-//            if index == pageIndex {
-//                self.next(view: view.subviews[0])
-//            } else {
-//                self.previous(view: view.subviews[0])
-//            }
-//        }
-    }
-    
     func next(view view: UIView) {
         let height = CABasicAnimation(keyPath: "bounds.size.height")
         height.fromValue = view.layer.bounds.height
@@ -149,14 +107,6 @@ extension ViewController: UIScrollViewDelegate {
         let pageWidth = scrollView.frame.size.width;
         let fractionalPage = scrollView.contentOffset.x / pageWidth;
         let page = lround(Double(fractionalPage));
-        print(page)
-        
-//        if (previousPage != page) {
-//            // Page has changed, do your thing!
-//            // ...
-//            // Finally, update previous page
-//            previousPage = page
-//        }
         
         if (self.currentIndex != page) {
             currentIndex = page
