@@ -23,9 +23,7 @@ class ViewController: UIViewController {
     var defaultWidthMax: CGFloat!
     
     var card: [UIView] = []
-    
-    var previousPage = 0
-    var currentIndex = 0
+    var currentIndex = -1
     
     override func viewDidLoad() {
         self.card.append(aView)
@@ -35,24 +33,24 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        
+        self.setDefaultProperties()
+        self.setViewProperties()
+        self.animateCard(atIndex: 0)
+    }
+    
+    func setViewProperties() {
+        for view in self.card {
+            let interfaceView = view.subviews[0]
+            interfaceView.layer.cornerRadius = 8
+        }
+    }
+    
+    func setDefaultProperties() {
         self.defaultWidthMax = self.scrollView.frame.width * 1.00
         self.defaultWidthMin = self.scrollView.frame.width * 0.925
         
         self.defaultHeightMax = self.scrollView.frame.height * 0.95
         self.defaultHeightMin = self.scrollView.frame.height * 0.70
-        
-        for (index, view) in self.card.enumerate() {
-            if index == 0 {
-                let interfaceView = view.subviews[0]
-                interfaceView.layer.cornerRadius = 8
-                self.next(view: interfaceView)
-            } else {
-                let interfaceView = view.subviews[0]
-                interfaceView.layer.cornerRadius = 8
-                self.previous(view: interfaceView)
-            }
-        }
     }
 }
 
@@ -98,20 +96,19 @@ extension ViewController: UIScrollViewDelegate {
         view.layer.bounds.size.width = defaultWidthMin
     }
     
-    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        let cardWidth = scrollView.frame.size.width;
+        let fractionalCard = scrollView.contentOffset.x / cardWidth;
+        let cardIndex = lround(Double(fractionalCard));
         
+        self.animateCard(atIndex: cardIndex)
     }
     
-    func scrollViewDidScroll(scrollView: UIScrollView) {
-        
-        let pageWidth = scrollView.frame.size.width;
-        let fractionalPage = scrollView.contentOffset.x / pageWidth;
-        let page = lround(Double(fractionalPage));
-        
-        if (self.currentIndex != page) {
-            currentIndex = page
+    func animateCard(atIndex cardIndex: Int) {
+        if (self.currentIndex != cardIndex) {
+            self.currentIndex = cardIndex
             for (index, view) in self.card.enumerate() {
-                if index == page {
+                if index == cardIndex {
                     self.next(view: view.subviews[0])
                 } else {
                     self.previous(view: view.subviews[0])
