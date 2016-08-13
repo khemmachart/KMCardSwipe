@@ -26,7 +26,6 @@ class ViewController: UIViewController {
     var currentIndex = -1
     
     var timer: NSTimer?
-    var counter: Int = 0
     
     override func viewDidLoad() {
         self.card.append(aView)
@@ -126,14 +125,14 @@ extension ViewController: UIScrollViewDelegate {
     
     func autoScrolling() {
         self.increaseCounter()
-        self.scrollToCard(counter)
+        self.scrollToCard(currentIndex)
     }
     
     func increaseCounter() {
-        if counter == self.card.count {
-            self.counter = 0
+        if currentIndex == self.card.count {
+            self.currentIndex = 0
         } else {
-            self.counter += 1
+            self.currentIndex += 1
         }
     }
     
