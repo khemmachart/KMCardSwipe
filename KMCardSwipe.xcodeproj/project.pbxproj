@@ -1,0 +1,296 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F91D40101D5F8704009059B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91D400F1D5F8704009059B9 /* AppDelegate.swift */; };
+		F91D40121D5F8704009059B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91D40111D5F8704009059B9 /* ViewController.swift */; };
+		F91D40151D5F8704009059B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F91D40131D5F8704009059B9 /* Main.storyboard */; };
+		F91D40171D5F8704009059B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F91D40161D5F8704009059B9 /* Assets.xcassets */; };
+		F91D401A1D5F8704009059B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F91D40181D5F8704009059B9 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F91D400C1D5F8704009059B9 /* KMCardSwipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KMCardSwipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F91D400F1D5F8704009059B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F91D40111D5F8704009059B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F91D40141D5F8704009059B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F91D40161D5F8704009059B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F91D40191D5F8704009059B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F91D401B1D5F8704009059B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F91D40091D5F8704009059B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F91D40031D5F8704009059B9 = {
+			isa = PBXGroup;
+			children = (
+				F91D400E1D5F8704009059B9 /* KMCardSwipe */,
+				F91D400D1D5F8704009059B9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F91D400D1D5F8704009059B9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F91D400C1D5F8704009059B9 /* KMCardSwipe.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F91D400E1D5F8704009059B9 /* KMCardSwipe */ = {
+			isa = PBXGroup;
+			children = (
+				F91D400F1D5F8704009059B9 /* AppDelegate.swift */,
+				F91D40111D5F8704009059B9 /* ViewController.swift */,
+				F91D40131D5F8704009059B9 /* Main.storyboard */,
+				F91D40161D5F8704009059B9 /* Assets.xcassets */,
+				F91D40181D5F8704009059B9 /* LaunchScreen.storyboard */,
+				F91D401B1D5F8704009059B9 /* Info.plist */,
+			);
+			path = KMCardSwipe;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F91D400B1D5F8704009059B9 /* KMCardSwipe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F91D401E1D5F8704009059B9 /* Build configuration list for PBXNativeTarget "KMCardSwipe" */;
+			buildPhases = (
+				F91D40081D5F8704009059B9 /* Sources */,
+				F91D40091D5F8704009059B9 /* Frameworks */,
+				F91D400A1D5F8704009059B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KMCardSwipe;
+			productName = KMCardSwipe;
+			productReference = F91D400C1D5F8704009059B9 /* KMCardSwipe.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F91D40041D5F8704009059B9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Khemmachart Chutapetch";
+				TargetAttributes = {
+					F91D400B1D5F8704009059B9 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = F91D40071D5F8704009059B9 /* Build configuration list for PBXProject "KMCardSwipe" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F91D40031D5F8704009059B9;
+			productRefGroup = F91D400D1D5F8704009059B9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F91D400B1D5F8704009059B9 /* KMCardSwipe */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F91D400A1D5F8704009059B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F91D401A1D5F8704009059B9 /* LaunchScreen.storyboard in Resources */,
+				F91D40171D5F8704009059B9 /* Assets.xcassets in Resources */,
+				F91D40151D5F8704009059B9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F91D40081D5F8704009059B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F91D40121D5F8704009059B9 /* ViewController.swift in Sources */,
+				F91D40101D5F8704009059B9 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F91D40131D5F8704009059B9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F91D40141D5F8704009059B9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F91D40181D5F8704009059B9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F91D40191D5F8704009059B9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F91D401C1D5F8704009059B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F91D401D1D5F8704009059B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F91D401F1D5F8704009059B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KMCardSwipe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = th.in.imn.KMCardSwipe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F91D40201D5F8704009059B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KMCardSwipe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = th.in.imn.KMCardSwipe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F91D40071D5F8704009059B9 /* Build configuration list for PBXProject "KMCardSwipe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F91D401C1D5F8704009059B9 /* Debug */,
+				F91D401D1D5F8704009059B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F91D401E1D5F8704009059B9 /* Build configuration list for PBXNativeTarget "KMCardSwipe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F91D401F1D5F8704009059B9 /* Debug */,
+				F91D40201D5F8704009059B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F91D40041D5F8704009059B9 /* Project object */;
+}
