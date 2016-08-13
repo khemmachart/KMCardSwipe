@@ -25,6 +25,9 @@ class ViewController: UIViewController {
     var card: [UIView] = []
     var currentIndex = -1
     
+    var timer: NSTimer?
+    var counter: Int = 0
+    
     override func viewDidLoad() {
         self.card.append(aView)
         self.card.append(bView)
@@ -36,6 +39,8 @@ class ViewController: UIViewController {
         self.setDefaultProperties()
         self.setViewProperties()
         self.animateCard(atIndex: 0)
+        
+        self.enableAutoScrolling(4)
     }
     
     func setViewProperties() {
@@ -55,6 +60,8 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UIScrollViewDelegate {
+    
+    // UISrollView delegate
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
         let cardWidth = scrollView.frame.size.width;
@@ -106,6 +113,38 @@ extension ViewController: UIScrollViewDelegate {
         view.layer.bounds.size.height = isCurrentView ? defaultHeightMax : defaultHeightMin
         view.layer.bounds.size.width = isCurrentView ? defaultWidthMax : defaultWidthMin
     }
-
+    
+    // Auto Scrolling
+    
+    func enableAutoScrolling(delay: Double) {
+        self.timer = NSTimer.scheduledTimerWithTimeInterval(delay, target: self, selector: #selector(self.autoScrolling), userInfo: nil, repeats: true)
+    }
+    
+    func disableAutoScrolling() {
+        self.timer?.invalidate()
+    }
+    
+    func autoScrolling() {
+        self.increaseCounter()
+        self.scrollToCard(counter)
+    }
+    
+    func increaseCounter() {
+        if counter == self.card.count {
+            self.counter = 0
+        } else {
+            self.counter += 1
+        }
+    }
+    
+    // Scrolling
+    
+    func scrollToCard(index: Int) {
+        let width = self.scrollView.frame.width
+        let height = self.scrollView.frame.height
+        let position = width * CGFloat(index)
+        let frame = CGRectMake(position, 0, width, height)
+        self.scrollView.scrollRectToVisible(frame, animated: true)
+    }
 }
 
