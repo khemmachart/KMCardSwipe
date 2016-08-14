@@ -24,7 +24,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GkH-Mm-Km8">
                                         <rect key="frame" x="0.0" y="0.0" width="1440" height="210"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ey-EK-DY7">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ey-EK-DY7" customClass="KMCardView" customModule="KMCardSwipe" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="480" height="210"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U9T-4W-Np3">
@@ -38,8 +38,11 @@
                                                     <constraint firstAttribute="bottom" secondItem="U9T-4W-Np3" secondAttribute="bottom" constant="50" id="fKu-nU-lZ4"/>
                                                     <constraint firstItem="U9T-4W-Np3" firstAttribute="leading" secondItem="2ey-EK-DY7" secondAttribute="leading" constant="20" id="tRW-vZ-LOP"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outlet property="interfaceView" destination="U9T-4W-Np3" id="8JT-9n-N6y"/>
+                                                </connections>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="STj-Ze-yxA">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="STj-Ze-yxA" customClass="KMCardView" customModule="KMCardSwipe" customModuleProvider="target">
                                                 <rect key="frame" x="480" y="0.0" width="480" height="210"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qbS-Fi-HHq">
@@ -53,8 +56,11 @@
                                                     <constraint firstItem="qbS-Fi-HHq" firstAttribute="leading" secondItem="STj-Ze-yxA" secondAttribute="leading" constant="20" id="hqE-xi-rhL"/>
                                                     <constraint firstAttribute="trailing" secondItem="qbS-Fi-HHq" secondAttribute="trailing" constant="20" id="m7a-Xa-SGT"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outlet property="interfaceView" destination="qbS-Fi-HHq" id="myz-7F-b4Z"/>
+                                                </connections>
                                             </view>
-                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zvI-rX-byP">
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zvI-rX-byP" customClass="KMCardView" customModule="KMCardSwipe" customModuleProvider="target">
                                                 <rect key="frame" x="900" y="0.0" width="600" height="220"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U1x-bk-ORU">
@@ -68,6 +74,9 @@
                                                     <constraint firstAttribute="trailing" secondItem="U1x-bk-ORU" secondAttribute="trailing" constant="20" id="JeE-9d-QRU"/>
                                                     <constraint firstItem="U1x-bk-ORU" firstAttribute="top" secondItem="zvI-rX-byP" secondAttribute="top" constant="50" id="bRj-mp-BCV"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outlet property="interfaceView" destination="U1x-bk-ORU" id="DH4-XH-UnT"/>
+                                                </connections>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

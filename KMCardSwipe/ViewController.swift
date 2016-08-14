@@ -12,20 +12,18 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
     
-    @IBOutlet weak var aView: UIView!
-    @IBOutlet weak var bView: UIView!
-    @IBOutlet weak var cView: UIView!
+    @IBOutlet weak var aView: KMCardView!
+    @IBOutlet weak var bView: KMCardView!
+    @IBOutlet weak var cView: KMCardView!
     
-    var defaultHeightMin: CGFloat!
-    var defaultHeightMax: CGFloat!
-    
-    var defaultWidthMin: CGFloat!
-    var defaultWidthMax: CGFloat!
-    
-    var card: [UIView] = []
+    var card: [KMCardView] = []
     var currentIndex = -1
     
     var timer: NSTimer?
+    
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)!
+    }
     
     override func viewDidLoad() {
         self.card.append(aView)
@@ -35,7 +33,6 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        self.setDefaultProperties()
         self.setViewProperties()
         self.animateCard(atIndex: 0)
         
@@ -43,24 +40,9 @@ class ViewController: UIViewController {
     }
     
     func setViewProperties() {
-        for view in self.card {
-            let interfaceView = view.subviews[0]
-            interfaceView.layer.cornerRadius = 8
-            interfaceView.layer.borderColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1).CGColor
-            interfaceView.layer.borderWidth = 1
-            interfaceView.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
-        }
         self.view.backgroundColor = UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 1)
         self.scrollView.backgroundColor = UIColor.clearColor()
         self.scrollView.subviews[0].backgroundColor = UIColor.clearColor()
-    }
-    
-    func setDefaultProperties() {
-        self.defaultWidthMax = self.scrollView.frame.width * 1.00
-        self.defaultWidthMin = self.scrollView.frame.width * 0.925
-        
-        self.defaultHeightMax = self.scrollView.frame.height * 1.00
-        self.defaultHeightMin = self.scrollView.frame.height * 0.75
     }
 }
 
@@ -81,42 +63,22 @@ extension ViewController: UIScrollViewDelegate {
             self.currentIndex = cardIndex
             for (index, view) in self.card.enumerate() {
                 if index == cardIndex {
-                    self.animateCurrent(view: view.subviews[0])
+                    self.animateCurrent(view: view)
                 } else {
-                    self.animateOther(view: view.subviews[0])
+                    self.animateOther(view: view)
                 }
             }
         }
     }
     
-    // Animation
+    // Animate card
     
-    func animateCurrent(view view: UIView) {
-        self.animateView(view: view, isCurrentView: true)
+    func animateCurrent(view view: KMCardView) {
+        view.animate(isCurrentView: true)
     }
     
-    func animateOther(view view: UIView) {
-        self.animateView(view: view, isCurrentView: false)
-    }
-    
-    func animateView(view view: UIView, isCurrentView: Bool) {
-        let height = CABasicAnimation(keyPath: "bounds.size.height")
-        height.fromValue = view.layer.bounds.height
-        height.toValue   = isCurrentView ? defaultHeightMax :defaultHeightMin
-        
-        let width = CABasicAnimation(keyPath: "bounds.size.width")
-        width.fromValue = view.layer.bounds.width
-        width.toValue   = isCurrentView ? defaultWidthMax : defaultWidthMin
-        
-        let groupAnimation =  CAAnimationGroup()
-        groupAnimation.animations = [height, width]
-        groupAnimation.removedOnCompletion = true
-        groupAnimation.duration = 0
-        groupAnimation.repeatCount = 1
-        
-        view.layer.addAnimation(groupAnimation, forKey: nil)
-        view.layer.bounds.size.height = isCurrentView ? defaultHeightMax : defaultHeightMin
-        view.layer.bounds.size.width = isCurrentView ? defaultWidthMax : defaultWidthMin
+    func animateOther(view view: KMCardView) {
+        view.animate(isCurrentView: false)
     }
     
     // Auto Scrolling
