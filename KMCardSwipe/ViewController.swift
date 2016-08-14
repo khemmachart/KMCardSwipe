@@ -46,15 +46,21 @@ class ViewController: UIViewController {
         for view in self.card {
             let interfaceView = view.subviews[0]
             interfaceView.layer.cornerRadius = 8
+            interfaceView.layer.borderColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1).CGColor
+            interfaceView.layer.borderWidth = 1
+            interfaceView.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
         }
+        self.view.backgroundColor = UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 1)
+        self.scrollView.backgroundColor = UIColor.clearColor()
+        self.scrollView.subviews[0].backgroundColor = UIColor.clearColor()
     }
     
     func setDefaultProperties() {
         self.defaultWidthMax = self.scrollView.frame.width * 1.00
         self.defaultWidthMin = self.scrollView.frame.width * 0.925
         
-        self.defaultHeightMax = self.scrollView.frame.height * 0.95
-        self.defaultHeightMin = self.scrollView.frame.height * 0.70
+        self.defaultHeightMax = self.scrollView.frame.height * 1.00
+        self.defaultHeightMin = self.scrollView.frame.height * 0.75
     }
 }
 

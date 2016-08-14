@@ -9,7 +9,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KCCardSwipe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KMCardSwipe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -19,16 +19,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDh-gf-ll5">
-                                <rect key="frame" x="60" y="120" width="480" height="260"/>
+                                <rect key="frame" x="60" y="120" width="480" height="210"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GkH-Mm-Km8">
-                                        <rect key="frame" x="0.0" y="0.0" width="1440" height="260"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="1440" height="210"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ey-EK-DY7">
-                                                <rect key="frame" x="0.0" y="0.0" width="480" height="260"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="480" height="210"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U9T-4W-Np3">
-                                                        <rect key="frame" x="20" y="50" width="440" height="160"/>
+                                                        <rect key="frame" x="20" y="50" width="440" height="110"/>
                                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     </view>
                                                 </subviews>
@@ -40,10 +40,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="STj-Ze-yxA">
-                                                <rect key="frame" x="480" y="0.0" width="480" height="260"/>
+                                                <rect key="frame" x="480" y="0.0" width="480" height="210"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qbS-Fi-HHq">
-                                                        <rect key="frame" x="20" y="50" width="440" height="160"/>
+                                                        <rect key="frame" x="20" y="50" width="440" height="110"/>
                                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     </view>
                                                 </subviews>
@@ -92,7 +92,7 @@
                                     <constraint firstAttribute="bottom" secondItem="GkH-Mm-Km8" secondAttribute="bottom" id="77i-jS-JYf"/>
                                     <constraint firstItem="zvI-rX-byP" firstAttribute="height" secondItem="ZDh-gf-ll5" secondAttribute="height" id="A0f-MA-yjh"/>
                                     <constraint firstItem="2ey-EK-DY7" firstAttribute="width" secondItem="ZDh-gf-ll5" secondAttribute="width" id="AOl-M4-Cyq"/>
-                                    <constraint firstAttribute="height" constant="260" id="FFK-fE-yds"/>
+                                    <constraint firstAttribute="height" constant="210" id="FFK-fE-yds"/>
                                     <constraint firstItem="STj-Ze-yxA" firstAttribute="width" secondItem="ZDh-gf-ll5" secondAttribute="width" id="Jab-qv-erA"/>
                                     <constraint firstAttribute="trailing" secondItem="GkH-Mm-Km8" secondAttribute="trailing" id="KPk-i5-7qE"/>
                                     <constraint firstItem="STj-Ze-yxA" firstAttribute="height" secondItem="ZDh-gf-ll5" secondAttribute="height" id="ZvB-WW-RwT"/>
