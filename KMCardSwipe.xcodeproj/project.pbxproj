@@ -13,6 +13,7 @@
 		F91D40171D5F8704009059B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F91D40161D5F8704009059B9 /* Assets.xcassets */; };
 		F91D401A1D5F8704009059B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F91D40181D5F8704009059B9 /* LaunchScreen.storyboard */; };
 		F963A0C61D60050B005F63E8 /* KMCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F963A0C51D60050B005F63E8 /* KMCardView.swift */; };
+		F963A0C81D60122D005F63E8 /* KMScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F963A0C71D60122D005F63E8 /* KMScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F91D40191D5F8704009059B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F91D401B1D5F8704009059B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F963A0C51D60050B005F63E8 /* KMCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KMCardView.swift; sourceTree = "<group>"; };
+		F963A0C71D60122D005F63E8 /* KMScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KMScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				F91D400F1D5F8704009059B9 /* AppDelegate.swift */,
 				F91D40111D5F8704009059B9 /* ViewController.swift */,
+				F963A0C71D60122D005F63E8 /* KMScrollView.swift */,
 				F963A0C51D60050B005F63E8 /* KMCardView.swift */,
 				F91D40131D5F8704009059B9 /* Main.storyboard */,
 				F91D40161D5F8704009059B9 /* Assets.xcassets */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F963A0C61D60050B005F63E8 /* KMCardView.swift in Sources */,
+				F963A0C81D60122D005F63E8 /* KMScrollView.swift in Sources */,
 				F91D40121D5F8704009059B9 /* ViewController.swift in Sources */,
 				F91D40101D5F8704009059B9 /* AppDelegate.swift in Sources */,
 			);

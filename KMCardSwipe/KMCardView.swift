@@ -16,11 +16,13 @@ class KMCardView: UIView {
     var defaultWidthMin  : CGFloat = 0
     var defaultWidthMax  : CGFloat = 0
     
-    @IBOutlet var interfaceView: UIView!
+    var interfaceView: UIView!
     
     override func layoutSubviews() {
-        self.addInterfaceView()
-        self.setDefaultProperties()
+        if  self.interfaceView == nil {
+            self.addInterfaceView()
+            self.setDefaultProperties()
+        }
     }
     
     func animate(isCurrentView isCurrentView: Bool) {
@@ -46,16 +48,22 @@ class KMCardView: UIView {
     func setDefaultProperties() {
         self.defaultWidthMax  = self.frame.width  * 1.00
         self.defaultWidthMin  = self.frame.width  * 0.925
+        
         self.defaultHeightMax = self.frame.height * 1.00
         self.defaultHeightMin = self.frame.height * 0.75
     }
     
     func addInterfaceView() {
         let borderColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1).CGColor
-        let backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
-        interfaceView.layer.cornerRadius = 8
-        interfaceView.layer.borderColor = borderColor
-        interfaceView.layer.borderWidth = 1
-        interfaceView.backgroundColor = backgroundColor
+        let backgroundColor = UIColor.clearColor() // UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+        let frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)
+        
+        self.interfaceView = UIView(frame: frame)
+        self.interfaceView.layer.cornerRadius = 8
+        self.interfaceView.layer.borderColor = borderColor
+        self.interfaceView.layer.borderWidth = 1
+        self.interfaceView.backgroundColor = backgroundColor
+        
+        self.addSubview(self.interfaceView)
     }
 }

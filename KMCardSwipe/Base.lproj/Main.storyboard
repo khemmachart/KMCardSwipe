@@ -18,102 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDh-gf-ll5">
+                            <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDh-gf-ll5" customClass="KMScrollView" customModule="KMCardSwipe" customModuleProvider="target">
                                 <rect key="frame" x="60" y="120" width="480" height="210"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GkH-Mm-Km8">
-                                        <rect key="frame" x="0.0" y="0.0" width="1440" height="210"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ey-EK-DY7" customClass="KMCardView" customModule="KMCardSwipe" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="480" height="210"/>
-                                                <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U9T-4W-Np3">
-                                                        <rect key="frame" x="20" y="50" width="440" height="110"/>
-                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </view>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="U9T-4W-Np3" firstAttribute="top" secondItem="2ey-EK-DY7" secondAttribute="top" constant="50" id="1FW-EF-rV4"/>
-                                                    <constraint firstAttribute="trailing" secondItem="U9T-4W-Np3" secondAttribute="trailing" constant="20" id="Nk3-1g-i6C"/>
-                                                    <constraint firstAttribute="bottom" secondItem="U9T-4W-Np3" secondAttribute="bottom" constant="50" id="fKu-nU-lZ4"/>
-                                                    <constraint firstItem="U9T-4W-Np3" firstAttribute="leading" secondItem="2ey-EK-DY7" secondAttribute="leading" constant="20" id="tRW-vZ-LOP"/>
-                                                </constraints>
-                                                <connections>
-                                                    <outlet property="interfaceView" destination="U9T-4W-Np3" id="8JT-9n-N6y"/>
-                                                </connections>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="STj-Ze-yxA" customClass="KMCardView" customModule="KMCardSwipe" customModuleProvider="target">
-                                                <rect key="frame" x="480" y="0.0" width="480" height="210"/>
-                                                <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qbS-Fi-HHq">
-                                                        <rect key="frame" x="20" y="50" width="440" height="110"/>
-                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </view>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="qbS-Fi-HHq" secondAttribute="bottom" constant="50" id="4gH-Bx-9Io"/>
-                                                    <constraint firstItem="qbS-Fi-HHq" firstAttribute="top" secondItem="STj-Ze-yxA" secondAttribute="top" constant="50" id="V6e-0L-6Ek"/>
-                                                    <constraint firstItem="qbS-Fi-HHq" firstAttribute="leading" secondItem="STj-Ze-yxA" secondAttribute="leading" constant="20" id="hqE-xi-rhL"/>
-                                                    <constraint firstAttribute="trailing" secondItem="qbS-Fi-HHq" secondAttribute="trailing" constant="20" id="m7a-Xa-SGT"/>
-                                                </constraints>
-                                                <connections>
-                                                    <outlet property="interfaceView" destination="qbS-Fi-HHq" id="myz-7F-b4Z"/>
-                                                </connections>
-                                            </view>
-                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zvI-rX-byP" customClass="KMCardView" customModule="KMCardSwipe" customModuleProvider="target">
-                                                <rect key="frame" x="900" y="0.0" width="600" height="220"/>
-                                                <subviews>
-                                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U1x-bk-ORU">
-                                                        <rect key="frame" x="50" y="50" width="500" height="120"/>
-                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </view>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="U1x-bk-ORU" firstAttribute="leading" secondItem="zvI-rX-byP" secondAttribute="leading" constant="20" id="2tp-4Q-jTL"/>
-                                                    <constraint firstAttribute="bottom" secondItem="U1x-bk-ORU" secondAttribute="bottom" constant="50" id="7Ce-W7-2QW"/>
-                                                    <constraint firstAttribute="trailing" secondItem="U1x-bk-ORU" secondAttribute="trailing" constant="20" id="JeE-9d-QRU"/>
-                                                    <constraint firstItem="U1x-bk-ORU" firstAttribute="top" secondItem="zvI-rX-byP" secondAttribute="top" constant="50" id="bRj-mp-BCV"/>
-                                                </constraints>
-                                                <connections>
-                                                    <outlet property="interfaceView" destination="U1x-bk-ORU" id="DH4-XH-UnT"/>
-                                                </connections>
-                                            </view>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstItem="STj-Ze-yxA" firstAttribute="leading" secondItem="2ey-EK-DY7" secondAttribute="trailing" id="7UW-3N-Ogg"/>
-                                            <constraint firstItem="zvI-rX-byP" firstAttribute="leading" secondItem="STj-Ze-yxA" secondAttribute="trailing" id="OYf-e8-Cio"/>
-                                            <constraint firstItem="STj-Ze-yxA" firstAttribute="top" secondItem="GkH-Mm-Km8" secondAttribute="top" id="PFU-5d-2XL"/>
-                                            <constraint firstAttribute="bottom" secondItem="2ey-EK-DY7" secondAttribute="bottom" id="ax7-Dg-p7A"/>
-                                            <constraint firstItem="2ey-EK-DY7" firstAttribute="leading" secondItem="GkH-Mm-Km8" secondAttribute="leading" id="daq-Q2-KX5"/>
-                                            <constraint firstItem="zvI-rX-byP" firstAttribute="top" secondItem="GkH-Mm-Km8" secondAttribute="top" id="knQ-FR-iuf"/>
-                                            <constraint firstItem="2ey-EK-DY7" firstAttribute="top" secondItem="GkH-Mm-Km8" secondAttribute="top" id="nva-C2-lbi"/>
-                                            <constraint firstItem="2ey-EK-DY7" firstAttribute="height" secondItem="GkH-Mm-Km8" secondAttribute="height" id="ov3-EL-1gA"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="ax7-Dg-p7A"/>
-                                            </mask>
-                                        </variation>
-                                    </view>
-                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="GkH-Mm-Km8" secondAttribute="bottom" id="77i-jS-JYf"/>
-                                    <constraint firstItem="zvI-rX-byP" firstAttribute="height" secondItem="ZDh-gf-ll5" secondAttribute="height" id="A0f-MA-yjh"/>
-                                    <constraint firstItem="2ey-EK-DY7" firstAttribute="width" secondItem="ZDh-gf-ll5" secondAttribute="width" id="AOl-M4-Cyq"/>
                                     <constraint firstAttribute="height" constant="210" id="FFK-fE-yds"/>
-                                    <constraint firstItem="STj-Ze-yxA" firstAttribute="width" secondItem="ZDh-gf-ll5" secondAttribute="width" id="Jab-qv-erA"/>
-                                    <constraint firstAttribute="trailing" secondItem="GkH-Mm-Km8" secondAttribute="trailing" id="KPk-i5-7qE"/>
-                                    <constraint firstItem="STj-Ze-yxA" firstAttribute="height" secondItem="ZDh-gf-ll5" secondAttribute="height" id="ZvB-WW-RwT"/>
-                                    <constraint firstItem="GkH-Mm-Km8" firstAttribute="width" secondItem="ZDh-gf-ll5" secondAttribute="width" multiplier="3" id="cFj-OJ-fiW"/>
-                                    <constraint firstItem="GkH-Mm-Km8" firstAttribute="leading" secondItem="ZDh-gf-ll5" secondAttribute="leading" id="hS8-f4-96V"/>
-                                    <constraint firstItem="GkH-Mm-Km8" firstAttribute="height" secondItem="ZDh-gf-ll5" secondAttribute="height" id="oBZ-pm-V79"/>
-                                    <constraint firstItem="zvI-rX-byP" firstAttribute="width" secondItem="ZDh-gf-ll5" secondAttribute="width" id="vmy-rj-1MP"/>
-                                    <constraint firstItem="GkH-Mm-Km8" firstAttribute="top" secondItem="ZDh-gf-ll5" secondAttribute="top" id="yx1-7e-Aqz"/>
                                 </constraints>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="jG2-uI-WBW"/>
-                                </connections>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -124,34 +33,23 @@
                             <constraint firstItem="ZDh-gf-ll5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BIW-n2-RS7"/>
                             <constraint firstItem="ZDh-gf-ll5" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="GlQ-PI-is0"/>
                             <constraint firstAttribute="trailing" secondItem="ZDh-gf-ll5" secondAttribute="trailing" id="H0j-ar-H0e"/>
-                            <constraint firstItem="2ey-EK-DY7" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="LA5-bR-0hX"/>
                             <constraint firstItem="ZDh-gf-ll5" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="QZp-tX-BZh"/>
-                            <constraint firstItem="zvI-rX-byP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="RBS-CK-XlW"/>
-                            <constraint firstItem="STj-Ze-yxA" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Sfw-Z5-iBr"/>
                             <constraint firstItem="ZDh-gf-ll5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TcR-TU-KE3"/>
                             <constraint firstItem="ZDh-gf-ll5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="bRY-vB-6uL"/>
-                            <constraint firstItem="zvI-rX-byP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="e8a-lb-jAj"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="LA5-bR-0hX"/>
                                 <exclude reference="0vL-Pg-lIc"/>
                                 <exclude reference="3Vj-Hp-SC0"/>
                                 <exclude reference="Aqy-p2-rOu"/>
                                 <exclude reference="BIW-n2-RS7"/>
                                 <exclude reference="H0j-ar-H0e"/>
                                 <exclude reference="QZp-tX-BZh"/>
-                                <exclude reference="Sfw-Z5-iBr"/>
-                                <exclude reference="RBS-CK-XlW"/>
-                                <exclude reference="e8a-lb-jAj"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="aView" destination="2ey-EK-DY7" id="Fkp-Ih-Obc"/>
-                        <outlet property="bView" destination="STj-Ze-yxA" id="bOU-ex-SIm"/>
-                        <outlet property="cView" destination="zvI-rX-byP" id="Grz-yj-zY6"/>
-                        <outlet property="scrollView" destination="ZDh-gf-ll5" id="JpH-cl-CoP"/>
+                        <outlet property="scrollView" destination="ZDh-gf-ll5" id="BDS-gq-1MH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
