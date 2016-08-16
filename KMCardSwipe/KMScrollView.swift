@@ -134,6 +134,7 @@ class KMScrollView: UIView, UIScrollViewDelegate {
         let frame = CGRectMake(0, 0, self.frame.width, self.frame.height)
         self.scrollView = UIScrollView(frame: frame)
         self.scrollView.clipsToBounds = false
+        self.scrollView.pagingEnabled = true
         self.scrollView.delegate = self
         self.addSubview(scrollView)
     }
